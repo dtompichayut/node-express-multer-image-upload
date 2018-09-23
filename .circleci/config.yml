@@ -15,7 +15,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: va-dependencies-{{ checksum "package.jon"}}
+          key: v1-dependencies-{{ checksum "package.jon"}}
       - run: npm test
       - setup_remote_docker
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
