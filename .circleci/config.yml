@@ -28,7 +28,7 @@ jobs:
               docker push coreclear/demo2:latest
               docker push coreclear/demo2:${CIRCLE_SHA1}
       - run:
-          name: "Call to rancher to deploy"
+          name: "Call to rancher to deploy container"
           command: |
               docker run --rm -it \
                 -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
